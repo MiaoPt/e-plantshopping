@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
+// import './App.jsx';
+// import { goToProducts } from "./App.jsx";
+// import { useState } from "react";
 
-function AboutUs() {
-
+function AboutUs({ goToProductsParam }) {
+    // const [page, setPage] = useState('landing');
+    // const goToProducts = () => {setPage('products')};
     return (
         <>
-        <div class="background-blur"></div>
+        <div className="background-blur"></div>
         <div className='landingpage'>
             <div className='left-landingpage'>
                 <p>Welcome to Paradise Nursery</p>
                 <p>------</p>
-                <button className='get-start-btn'>Get Started</button>
+                <button className='get-start-btn' onClick = {goToProductsParam}>Get Started</button>
             </div>
             <div className='right-landingpage'>
                 <p>Welcome to E-PlantShopping, your go-to destination for bringing nature into your home with ease. We offer a carefully curated selection of indoor and outdoor plants, from low-maintenance succulents to vibrant statement pieces, all available at your fingertips. Whether you’re a beginner looking to start your plant journey or a seasoned plant lover expanding your collection, our platform makes it simple to browse, learn, and shop.</p>    

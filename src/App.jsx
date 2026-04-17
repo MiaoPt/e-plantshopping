@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
 import AboutUs from './AboutUs';
+import ProductList from './ProductList';
+import { useState } from "react";
 
 function App() {
+  const [page, setPage] = useState('landing');
+  const goToProducts = () => {setPage('products')};
+  
   return (
-      <AboutUs />
+     
+    <>
+      {page === 'landing' && <AboutUs goToProductsParam={goToProducts} />};
+      {page === 'products' && <ProductList />};
 
+    </>
+   
   );
 }
 
