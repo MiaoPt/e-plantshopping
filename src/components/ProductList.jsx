@@ -4,7 +4,7 @@ import logo from '../logo.png';
 import '../App.css';
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../store/cartSlice';
+import { addItem } from '../store/cartSlice';
 import Banner from './Banner.jsx'
 
 function ProductList({goToCartParam}) {
@@ -17,7 +17,7 @@ function ProductList({goToCartParam}) {
     const cartItems = useSelector((state) => state.cart.items)
     //const foodPlants = useSelector((state) => state.products)
     const handleAddToCart = (product) => {
-      dispatch(addToCart(product));
+      dispatch(addItem(product));
 
     }
     return (
